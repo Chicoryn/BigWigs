@@ -39,6 +39,10 @@ if L then
 	L.emerge_icon = "spell_fire_volcano"
 	L.emerge_message = "Ragnaros emerged, 3 mins until submerge!"
 	L.emerge_bar = "Emerge"
+
+	L.engage = "Engage"
+	L.engage_desc = "Warn for when combat starts."
+	L.engage_icon = "spell_fire_fireball02"
 end
 L = mod:GetLocale()
 
@@ -50,6 +54,7 @@ function mod:GetOptions()
 	return {
 		"submerge",
 		"emerge",
+		"engage",
 		20566, -- Wrath of Ragnaros
 	}
 end
@@ -58,6 +63,8 @@ function mod:OnBossEnable()
 	self:RegisterEvent("CHAT_MSG_MONSTER_YELL")
 
 	self:Log("SPELL_CAST_SUCCESS", "Knockback", self:SpellName(20566))
+	self:Log("SPELL_CAST_SUCCESS", "MajordomoDeath", self:SpellName(19773))
+	self:Log("SPELL_CAST_SUCCESS", "SummonRagnaros", self:SpellName(19774))
 
 	self:Death("Win", 11502)
 	self:Death("SonDeaths", 12143)
@@ -85,6 +92,14 @@ function mod:CHAT_MSG_MONSTER_YELL(_, msg)
 	elseif msg:find(L.submerge_trigger, nil, true) then
 		self:Submerge()
 	end
+end
+
+function mod:MajordomoDeath()
+	self:Bar("engage", 10)
+end
+
+function mod:SummonRagnaros()
+	self:Bar("engage", 73)
 end
 
 function mod:Knockback(args)
