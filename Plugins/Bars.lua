@@ -69,7 +69,7 @@ local barStyleRegister = {}
 do
 	-- !Beautycase styling, based on !Beatycase by Neal "Neave" @ WowI, texture made by Game92 "Aftermathh" @ WowI
 
-	local textureNormal = "Interface\\AddOns\\BigWigs\\Media\\Textures\\beautycase"
+	local textureNormal = "Interface\\AddOns\\CherWigs\\Media\\Textures\\beautycase"
 
 	local backdropbc = {
 		bgFile = "Interface\\Buttons\\WHITE8x8",
@@ -1341,7 +1341,7 @@ do
 		drag:SetScript("OnMouseUp", onDragHandleMouseUp)
 		drag:SetAlpha(0.5)
 		local tex = drag:CreateTexture(nil, "OVERLAY")
-		tex:SetTexture("Interface\\AddOns\\BigWigs\\Media\\Textures\\draghandle")
+		tex:SetTexture("Interface\\AddOns\\CherWigs\\Media\\Textures\\draghandle")
 		tex:SetWidth(16)
 		tex:SetHeight(16)
 		tex:SetBlendMode("ADD")
