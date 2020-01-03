@@ -24,7 +24,7 @@
 ## Notes-esMX: Plugins del núcleo de CherWigs.
 
 ## LoadOnDemand: 1
-## Dependencies: BigWigs, BigWigs_Core
+## Dependencies: CherWigs, CherWigs_Core
 ## X-BigWigs-LoadOn-CoreEnabled: 1
 ## X-BigWigs-LoadOn-Slash: /proximity, /range, /localbar, /raidbar, /pull, /break
 

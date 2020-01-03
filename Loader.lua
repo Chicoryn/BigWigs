@@ -186,7 +186,7 @@ local function loadZone(zone)
 end
 
 local function loadAndEnableCore()
-	local loaded = load(BigWigs, "BigWigs_Core")
+	local loaded = load(BigWigs, "CherWigs_Core")
 	if not BigWigs then return end
 	loadAddons(loadOnCoreEnabled)
 	BigWigs:Enable()
@@ -195,7 +195,7 @@ end
 
 local function loadCoreAndOpenOptions()
 	loadAndEnableCore()
-	load(BigWigsOptions, "BigWigs_Options")
+	load(BigWigsOptions, "CherWigs_Options")
 	if BigWigsOptions then
 		BigWigsOptions:Open()
 	end
@@ -267,9 +267,9 @@ end
 
 do
 	local reqFuncAddons = {
-		BigWigs_Core = true,
-		BigWigs_Options = true,
-		BigWigs_Plugins = true,
+		CherWigs_Core = true,
+		CherWigs_Options = true,
+		CherWigs_Plugins = true,
 	}
 	local loadOnInstanceAddons = {} -- Will contain all names of addons with an X-BigWigs-LoadOn-InstanceId directive
 	local loadOnWorldBoss = {} -- Addons that should load when targetting a specific mob
@@ -286,7 +286,7 @@ do
 		if IsAddOnEnabled(i) then
 			local meta = GetAddOnMetadata(i, "X-BigWigs-LoadOn-CoreEnabled")
 			if meta then
-				if name == "BigWigs_Plugins" then -- Always first
+				if name == "CherWigs_Plugins" then -- Always first
 					table.insert(loadOnCoreEnabled, 1, i)
 				else
 					loadOnCoreEnabled[#loadOnCoreEnabled + 1] = i
@@ -319,7 +319,7 @@ do
 						if name:find("BigWigs", nil, true) then
 							-- Attempting to be smart. Only load core & config if it's a BW plugin.
 							loadAndEnableCore()
-							load(BigWigsOptions, "BigWigs_Options")
+							load(BigWigsOptions, "CherWigs_Options")
 						end
 						if load(nil, i) then -- Load the addon/plugin
 							-- Call the slash command again, which should have been set by the addon.
@@ -674,13 +674,13 @@ do
 		if IsAddOnEnabled(i) and not IsAddOnLoadOnDemand(i) then
 			for j = 1, select("#", GetAddOnOptionalDependencies(i)) do
 				local meta = select(j, GetAddOnOptionalDependencies(i))
-				if meta and (meta == "BigWigs_Core" or meta == "BigWigs_Plugins" or meta == "BigWigs_Options") then
+				if meta and (meta == "CherWigs_Core" or meta == "CherWigs_Plugins" or meta == "CherWigs_Options") then
 					delayedMessages[#delayedMessages+1] = "The addon '|cffffff00"..name.."|r' is forcing BigWigs to load prematurely, notify the BigWigs authors!"
 				end
 			end
 			for j = 1, select("#", GetAddOnDependencies(i)) do
 				local meta = select(j, GetAddOnDependencies(i))
-				if meta and (meta == "BigWigs_Core" or meta == "BigWigs_Plugins" or meta == "BigWigs_Options") then
+				if meta and (meta == "CherWigs_Core" or meta == "CherWigs_Plugins" or meta == "CherWigs_Options") then
 					delayedMessages[#delayedMessages+1] = "The addon '|cffffff00"..name.."|r' is forcing BigWigs to load prematurely, notify the BigWigs authors!"
 				end
 			end

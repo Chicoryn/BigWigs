@@ -24,7 +24,7 @@
 ## Notes-esMX: Opciones de configuración de CherWigs.
 
 ## LoadOnDemand: 1
-## Dependencies: BigWigs, BigWigs_Core, BigWigs_Plugins
+## Dependencies: CherWigs, CherWigs_Core, CherWigs_Plugins
 
 libs.xml
 modules.xml
