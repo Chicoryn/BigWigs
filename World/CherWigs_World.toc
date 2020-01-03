@@ -24,7 +24,7 @@
 ## Notes-koKR: CherWigs World Boss Modules
 
 ## LoadOnDemand: 1
-## Dependencies: BigWigs
+## Dependencies: CherWigs
 
 ## X-Category: Raid
 ## X-BigWigs-ExtraMenu: -1447, -1419

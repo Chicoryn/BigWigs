@@ -495,7 +495,7 @@ do
 end
 
 function mod:ADDON_LOADED(addon)
-	if addon ~= "BigWigs" then return end
+	if addon ~= "CherWigs" then return end
 
 	bwFrame:RegisterEvent("ZONE_CHANGED_NEW_AREA")
 	bwFrame:RegisterEvent("RAID_INSTANCE_WELCOME")
