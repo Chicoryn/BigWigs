@@ -1,0 +1,32 @@
+## Interface: 11303
+
+## Title: CherWigs [|cffeda55fOnyxia|r]
+## Title-zhCN: CherWigs [|cffeda55fOnyxia|r]
+## Title-zhTW: CherWigs [|cffeda55fOnyxia|r]
+## Title-deDE: CherWigs [|cffeda55fOnyxia|r]
+## Title-frFR: CherWigs [|cffeda55fOnyxia|r]
+## Title-itIT: CherWigs [|cffeda55fOnyxia|r]
+## Title-koKR: CherWigs [|cffeda55fOnyxia|r]
+## Title-ruRU: CherWigs [|cffeda55fOnyxia|r]
+## Title-ptBR: CherWigs [|cffeda55fOnyxia|r]
+## Title-esES: CherWigs [|cffeda55fOnyxia|r]
+## Title-esMX: CherWigs [|cffeda55fOnyxia|r]
+## Notes: CherWigs Onyxia Modules
+## Notes-zhCN: CherWigs Onyxia Modules
+## Notes-zhTW: CherWigs Onyxia Modules
+## Notes-deDE: CherWigs Onyxia Modules
+## Notes-frFR: CherWigs Onyxia Modules
+## Notes-itIT: CherWigs Onyxia Modules
+## Notes-koKR: CherWigs Onyxia Modules
+## Notes-ruRU: CherWigs Onyxia Modules
+## Notes-ptBR: CherWigs Onyxia Modules
+## Notes-esES: CherWigs Onyxia Modules
+## Notes-esMX: CherWigs Onyxia Modules
+
+## LoadOnDemand: 1
+## Dependencies: BigWigs
+
+## X-Category: Raid
+## X-BigWigs-LoadOn-InstanceId: 249
+
+modules.xml

@@ -1,0 +1,31 @@
+## Interface: 11303
+
+## Title: CherWigs [|cffeda55fOptions|r]
+## Title-zhCN: CherWigs [|cffeda55f选项|r]
+## Title-zhTW: CherWigs [|cffeda55f選項|r]
+## Title-deDE: CherWigs [|cffeda55fOptionen|r]
+## Title-frFR: CherWigs [|cffeda55fOptions|r]
+## Title-itIT: CherWigs [|cffeda55fOpzioni|r]
+## Title-koKR: CherWigs [|cffeda55f옵션|r]
+## Title-ruRU: CherWigs [|cffeda55fНастройки|r]
+## Title-ptBR: CherWigs [|cffeda55fOptions|r]
+## Title-esES: CherWigs [|cffeda55fOpciones|r]
+## Title-esMX: CherWigs [|cffeda55fOpciones|r]
+## Notes: CherWigs Configuration Options
+## Notes-zhCN: CherWigs 配置选项。
+## Notes-zhTW: CherWigs 配置選項。
+## Notes-deDE: CherWigs Einstellungsmöglichkeiten.
+## Notes-frFR: Options de configuration de CherWigs.
+## Notes-itIT: Opzioni di configurazione per CherWigs
+## Notes-koKR: CherWigs 구성 옵션
+## Notes-ruRU: Модуль настроек CherWigs
+## Notes-ptBR: CherWigs Configuration Options
+## Notes-esES: Opciones de configuración de CherWigs.
+## Notes-esMX: Opciones de configuración de CherWigs.
+
+## LoadOnDemand: 1
+## Dependencies: BigWigs, BigWigs_Core, BigWigs_Plugins
+
+libs.xml
+modules.xml
+

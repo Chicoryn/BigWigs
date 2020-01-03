@@ -1,0 +1,30 @@
+## Interface: 11303
+
+## Title: CherWigs [|cffeda55fCore|r]
+## Title-zhCN: CherWigs [|cffeda55f核心|r]
+## Title-zhTW: CherWigs [|cffeda55f核心|r]
+## Title-deDE: CherWigs [|cffeda55fKern|r]
+## Title-frFR: CherWigs [|cffeda55fNoyau|r]
+## Title-itIT: CherWigs [|cffeda55fBase|r]
+## Title-koKR: CherWigs [|cffeda55fCore|r]
+## Title-ruRU: CherWigs [|cffeda55fЯдро|r]
+## Title-ptBR: CherWigs [|cffeda55fCore|r]
+## Title-esES: CherWigs [|cffeda55fNúcleo|r]
+## Title-esMX: CherWigs [|cffeda55fNúcleo|r]
+## Notes: CherWigs Core
+## Notes-zhCN: CherWigs 核心模块。
+## Notes-zhTW: CherWigs 核心模組。
+## Notes-deDE: CherWigs Kern.
+## Notes-frFR: Noyau de CherWigs.
+## Notes-itIT: CherWigs Base
+## Notes-koKR: CherWigs Core
+## Notes-ruRU: Ядро CherWigs
+## Notes-ptBR: Core do CherWigs
+## Notes-esES: Núcleo de CherWigs.
+## Notes-esMX: Núcleo de CherWigs.
+
+## LoadOnDemand: 1
+## Dependencies: CherWigs
+
+libs.xml
+modules.xml

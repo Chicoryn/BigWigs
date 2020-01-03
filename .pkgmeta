@@ -1,4 +1,4 @@
-package-as: BigWigs
+package-as: CherWigs
 wowi-archive-previous: no
 
 externals:
@@ -16,12 +16,12 @@ externals:
     Options/Libs/LibDDI-1.0: https://repos.wowace.com/wow/libddi-1-0/trunk
 
 move-folders:
-    BigWigs/Core: BigWigs_Core
-    BigWigs/Options: BigWigs_Options
-    BigWigs/Plugins: BigWigs_Plugins
-    BigWigs/Onyxia: BigWigs_Onyxia
-    BigWigs/MoltenCore: BigWigs_MoltenCore
-    BigWigs/World: BigWigs_World
+    CherWigs/Core: CherWigs_Core
+    CherWigs/Options: CherWigs_Options
+    CherWigs/Plugins: CherWigs_Plugins
+    CherWigs/Onyxia: CherWigs_Onyxia
+    CherWigs/MoltenCore: CherWigs_MoltenCore
+    CherWigs/World: CherWigs_World
 
 ignore:
   - .luacheckrc

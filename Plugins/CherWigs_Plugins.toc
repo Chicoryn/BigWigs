@@ -1,0 +1,34 @@
+## Interface: 11303
+
+## Title: CherWigs [|cffeda55fPlugins|r]
+## Title-zhCN: CherWigs [|cffeda55f插件|r]
+## Title-zhTW: CherWigs [|cffeda55f附加元件|r]
+## Title-deDE: CherWigs [|cffeda55fPlugins|r]
+## Title-frFR: CherWigs [|cffeda55fPlugins|r]
+## Title-itIT: CherWigs [|cffeda55fPlugins|r]
+## Title-koKR: CherWigs [|cffeda55f플러그인|r]
+## Title-ruRU: CherWigs [|cffeda55fПлагины|r]
+## Title-ptBR: CherWigs [|cffeda55fPlugins|r]
+## Title-esES: CherWigs [|cffeda55fPlugins|r]
+## Title-esMX: CherWigs [|cffeda55fPlugins|r]
+## Notes: CherWigs Core Plugins
+## Notes-zhCN: CherWigs 插件模块。
+## Notes-zhTW: CherWigs 附加元件模組。
+## Notes-deDE: Plugins für die Grundfunktionen von CherWigs.
+## Notes-frFR: Plugins du noyau de CherWigs.
+## Notes-itIT: Plugins di base per CherWigs
+## Notes-koKR: CherWigs 플러그인
+## Notes-ruRU: Модуль CherWigs Плагины
+## Notes-ptBR: Plugins principais do CherWigs
+## Notes-esES: Plugins del núcleo de CherWigs.
+## Notes-esMX: Plugins del núcleo de CherWigs.
+
+## LoadOnDemand: 1
+## Dependencies: BigWigs, BigWigs_Core
+## X-BigWigs-LoadOn-CoreEnabled: 1
+## X-BigWigs-LoadOn-Slash: /proximity, /range, /localbar, /raidbar, /pull, /break
+
+## X-Category: Raid
+
+libs.xml
+modules.xml

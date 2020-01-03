@@ -1,6 +1,6 @@
 ## Interface: 11303
 
-## Title: BigWigs
+## Title: CherWigs
 ## Notes: Modular, lightweight, non-intrusive approach to boss encounter warnings.
 ## Notes-deDE: Modulare und einfache Boss Encounter Warnungen.
 ## Notes-ruRU: Простой и удобный помощник в битвах с боссами.
@@ -17,9 +17,7 @@
 
 ## X-Category: Raid
 ## X-License: All Rights Reserved: You are free to fork and modify on GitHub, please ask us about anything else.
-## X-Website: https://github.com/BigWigsMods
-## X-Curse-Project-ID: 2382
-## X-WoWI-ID: 5086
+## X-Website: https://github.com/Chicoryn/CherWigs
 
 ## OptionalDeps: Ace3, LibCandyBar-3.0, LibSharedMedia-3.0, LibSink-2.0, LibDBIcon-1.0, LibDDI-1.0, LibChatAnims, LibDualSpec-1.0
 ## SavedVariables: BigWigsClassicDB, BigWigsIconClassicDB, BigWigsStatsClassicDB, BigWigs3DB, BigWigsIconDB, BigWigsStatsDB

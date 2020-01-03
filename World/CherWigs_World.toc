@@ -1,0 +1,33 @@
+## Interface: 11303
+
+## Title: CherWigs [|cffeda55fWorld|r]
+## Title-deDE: CherWigs [|cffeda55fWorld|r]
+## Title-esES: CherWigs [|cffeda55fWorld|r]
+## Title-esMX: CherWigs [|cffeda55fWorld|r]
+## Title-frFR: CherWigs [|cffeda55fWorld|r]
+## Title-ruRU: CherWigs [|cffeda55fWorld|r]
+## Title-zhCN: CherWigs [|cffeda55fWorld|r]
+## Title-zhTW: CherWigs [|cffeda55fWorld|r]
+## Title-itIT: CherWigs [|cffeda55fWorld|r]
+## Title-ptBR: CherWigs [|cffeda55fWorld|r]
+## Title-koKR: CherWigs [|cffeda55fWorld|r]
+## Notes: CherWigs World Boss Modules
+## Notes-deDE: CherWigs World Boss Modules
+## Notes-esES: CherWigs World Boss Modules
+## Notes-esMX: CherWigs World Boss Modules
+## Notes-frFR: CherWigs World Boss Modules
+## Notes-ruRU: CherWigs World Boss Modules
+## Notes-zhCN: CherWigs World Boss Modules
+## Notes-zhTW: CherWigs World Boss Modules
+## Notes-itIT: CherWigs World Boss Modules
+## Notes-ptBR: CherWigs World Boss Modules
+## Notes-koKR: CherWigs World Boss Modules
+
+## LoadOnDemand: 1
+## Dependencies: BigWigs
+
+## X-Category: Raid
+## X-BigWigs-ExtraMenu: -1447, -1419
+## X-BigWigs-LoadOn-WorldBoss: -1447, 6109, -1419, 12397
+
+modules.xml

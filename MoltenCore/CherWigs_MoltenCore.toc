@@ -1,0 +1,32 @@
+## Interface: 11303
+
+## Title: CherWigs [|cffeda55fMolten Core|r]
+## Title-zhCN: CherWigs [|cffeda55fMolten Core|r]
+## Title-zhTW: CherWigs [|cffeda55fMolten Core|r]
+## Title-deDE: CherWigs [|cffeda55fMolten Core|r]
+## Title-frFR: CherWigs [|cffeda55fMolten Core|r]
+## Title-itIT: CherWigs [|cffeda55fMolten Core|r]
+## Title-koKR: CherWigs [|cffeda55fMolten Core|r]
+## Title-ruRU: CherWigs [|cffeda55fMolten Core|r]
+## Title-ptBR: CherWigs [|cffeda55fMolten Core|r]
+## Title-esES: CherWigs [|cffeda55fMolten Core|r]
+## Title-esMX: CherWigs [|cffeda55fMolten Core|r]
+## Notes: CherWigs Molten Core Modules
+## Notes-zhCN: CherWigs Molten Core Modules
+## Notes-zhTW: CherWigs Molten Core Modules
+## Notes-deDE: CherWigs Molten Core Modules
+## Notes-frFR: CherWigs Molten Core Modules
+## Notes-itIT: CherWigs Molten Core Modules
+## Notes-koKR: CherWigs Molten Core Modules
+## Notes-ruRU: CherWigs Molten Core Modules
+## Notes-ptBR: CherWigs Molten Core Modules
+## Notes-esES: CherWigs Molten Core Modules
+## Notes-esMX: CherWigs Molten Core Modules
+
+## LoadOnDemand: 1
+## Dependencies: CherWigs
+
+## X-Category: Raid
+## X-BigWigs-LoadOn-InstanceId: 409
+
+modules.xml
