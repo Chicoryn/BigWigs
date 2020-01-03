@@ -24,7 +24,7 @@
 ## Notes-esMX: CherWigs Onyxia Modules
 
 ## LoadOnDemand: 1
-## Dependencies: BigWigs
+## Dependencies: CherWigs
 
 ## X-Category: Raid
 ## X-BigWigs-LoadOn-InstanceId: 249
