@@ -41,6 +41,7 @@ if L then
 	L.emerge_bar = "Emerge"
 
 	L.engage = "Engage"
+	L.engage_bar = "Pull"
 	L.engage_desc = "Warn for when combat starts."
 	L.engage_icon = "spell_fire_fireball02"
 end
@@ -64,7 +65,7 @@ function mod:OnBossEnable()
 
 	self:Log("SPELL_CAST_SUCCESS", "Knockback", self:SpellName(20566))
 	self:Log("SPELL_CAST_SUCCESS", "MajordomoDeath", self:SpellName(19773))
-	self:Log("SPELL_CAST_SUCCESS", "SummonRagnaros", self:SpellName(19774))
+	self:Log("SPELL_CAST_START", "SummonRagnaros", self:SpellName(19774))
 
 	self:Death("Win", 11502)
 	self:Death("SonDeaths", 12143)
@@ -95,11 +96,11 @@ function mod:CHAT_MSG_MONSTER_YELL(_, msg)
 end
 
 function mod:MajordomoDeath()
-	self:Bar("engage", 10)
+	self:Bar("engage", 10, L.engage_bar, L.engage_icon)
 end
 
 function mod:SummonRagnaros()
-	self:Bar("engage", 73)
+	self:Bar("engage", 73, L.engage_bar, L.engage_icon)
 end
 
 function mod:Knockback(args)
