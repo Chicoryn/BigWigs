@@ -2,9 +2,10 @@
 -- Module declaration
 --
 
-local mod = BigWigs:NewBoss("Broodlord Lashlayer", 469, 1531)
+local mod = BigWigs:NewBoss("Broodlord Lashlayer", 469)
 if not mod then return end
 mod:RegisterEnableMob(12017)
+mod.engageId = 612
 
 --------------------------------------------------------------------------------
 -- Initialization
