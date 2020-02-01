@@ -5,7 +5,6 @@
 local mod, CL = BigWigs:NewBoss("Nefarian ", 469, 1536) -- Space is intentional to prevent conflict with Nefarian from BWD
 if not mod then return end
 mod:RegisterEnableMob(11583, 10162) -- Nefarian, Lord Victor Nefarius
-mod.toggleOptions = {22539, 22686, "drakonid", "classcall", "otherwarn"}
 
 --------------------------------------------------------------------------------
 -- Localization
@@ -82,6 +81,16 @@ local warnTable = {
 --------------------------------------------------------------------------------
 -- Initialization
 --
+
+function mod:GetOptions()
+	return {
+		22539, -- Shadow Flame
+		22686, -- Fear
+		"drakonid",
+		"classcall",
+		"otherwarn"
+	}
+end
 
 function mod:OnBossEnable()
 	self:Log("SPELL_CAST_START", "Fear", 22686)

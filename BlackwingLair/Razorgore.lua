@@ -5,7 +5,6 @@
 local mod = BigWigs:NewBoss("Razorgore the Untamed", 469, 1529)
 if not mod then return end
 mod:RegisterEnableMob(12435, 12557) -- Razorgore, Grethok the Controller
-mod.toggleOptions = {14515, {23023, "ICON"}, "eggs", "stages"}
 
 local eggs = 0
 
@@ -32,6 +31,15 @@ L = mod:GetLocale()
 --------------------------------------------------------------------------------
 -- Initialization
 --
+
+function mod:GetOptions()
+	return {
+		14515, -- Dominate Mind
+		{23023, "ICON"}, -- Conflagration
+		"eggs",
+		"stages"
+	}
+end
 
 function mod:OnBossEnable()
 	self:Log("SPELL_AURA_APPLIED", "DominateMind", 14515)

@@ -5,11 +5,16 @@
 local mod = BigWigs:NewBoss("Broodlord Lashlayer", 469, 1531)
 if not mod then return end
 mod:RegisterEnableMob(12017)
-mod.toggleOptions = {{40220, "ICON"}}
 
 --------------------------------------------------------------------------------
 -- Initialization
 --
+
+function mod:GetOptions()
+	return {
+		{40220, "ICON"} -- Mortal Strike
+	}
+end
 
 function mod:OnBossEnable()
 	self:Log("SPELL_AURA_APPLIED", "MortalStrike", 24573)
