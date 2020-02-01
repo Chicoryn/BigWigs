@@ -5,11 +5,18 @@
 local mod, CL = BigWigs:NewBoss("Flamegor", 469, 1534)
 if not mod then return end
 mod:RegisterEnableMob(11981)
-mod.toggleOptions = {23339, 22539, 23342}
 
 --------------------------------------------------------------------------------
 -- Initialization
 --
+
+function mod:GetOptions()
+	return {
+		23339, -- Wing Buffet
+		22539, -- Shadow Flame
+		23342 -- Enrage
+	}
+end
 
 function mod:OnBossEnable()
 	self:Log("SPELL_CAST_START", "WingBuffet", 23339)

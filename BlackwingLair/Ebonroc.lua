@@ -5,11 +5,18 @@
 local mod, CL = BigWigs:NewBoss("Ebonroc", 469, 1533)
 if not mod then return end
 mod:RegisterEnableMob(14601)
-mod.toggleOptions = {23339, 22539, {23340, "ICON"}}
 
 --------------------------------------------------------------------------------
 -- Initialization
 --
+
+function mod:GetOptions()
+	return {
+		23339, -- Wing Buffet
+		22539, -- Shadow Flame
+		{23340, "ICON"} -- Shadow of Ebonroc
+	}
+end
 
 function mod:OnBossEnable()
 	self:Log("SPELL_CAST_START", "WingBuffet", 23339)

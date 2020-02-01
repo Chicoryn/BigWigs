@@ -5,11 +5,16 @@
 local mod = BigWigs:NewBoss("Vaelastrasz the Corrupt", 469, 1530)
 if not mod then return end
 mod:RegisterEnableMob(13020)
-mod.toggleOptions = {{18173, "ICON"}}
 
 --------------------------------------------------------------------------------
 -- Initialization
 --
+
+function mod:GetOptions()
+	return {
+		{18173, "ICON"} -- Adrenaline
+	}
+end
 
 function mod:OnBossEnable()
 	self:Log("SPELL_AURA_APPLIED", "Adrenaline", 18173)
