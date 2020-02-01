@@ -5,6 +5,7 @@
 local mod, CL = BigWigs:NewBoss("Firemaw", 469, 1532)
 if not mod then return end
 mod:RegisterEnableMob(11983)
+<<<<<<< HEAD
 mod:SetAllowWin(true)
 mod.engageId = 613
 
@@ -17,6 +18,8 @@ if L then
 	L.bossName = "Firemaw"
 end
 L = mod:GetLocale()
+=======
+>>>>>>> Move all `mod.toggleOptions` to `mod:GetOptions`
 
 --------------------------------------------------------------------------------
 -- Initialization
@@ -25,6 +28,7 @@ L = mod:GetLocale()
 function mod:GetOptions()
 	return {
 		23339, -- Wing Buffet
+<<<<<<< HEAD
 		22539, -- Shadow Flame
 	}
 end
@@ -33,6 +37,12 @@ function mod:OnRegister()
 	self.displayName = L.bossName
 end
 
+=======
+		22539 -- Shadow Flame
+	}
+end
+
+>>>>>>> Move all `mod.toggleOptions` to `mod:GetOptions`
 function mod:OnBossEnable()
 	self:Log("SPELL_CAST_START", "WingBuffet", self:SpellName(23339))
 	self:Log("SPELL_CAST_START", "ShadowFlame", self:SpellName(22539))

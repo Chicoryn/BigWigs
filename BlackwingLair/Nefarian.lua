@@ -89,6 +89,7 @@ function mod:GetOptions()
 	return {
 		22539, -- Shadow Flame
 		22686, -- Bellowing Roar
+		"drakonid",
 		"classcall",
 		"otherwarn"
 	}

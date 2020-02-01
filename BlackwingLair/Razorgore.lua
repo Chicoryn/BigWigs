@@ -5,12 +5,15 @@
 local mod = BigWigs:NewBoss("Razorgore the Untamed", 469, 1529)
 if not mod then return end
 mod:RegisterEnableMob(12435, 12557) -- Razorgore, Grethok the Controller
+<<<<<<< HEAD
 mod:SetAllowWin(true)
 mod.engageId = 610
 
 --------------------------------------------------------------------------------
 -- Locals
 --
+=======
+>>>>>>> Move all `mod.toggleOptions` to `mod:GetOptions`
 
 local eggs = 0
 
@@ -45,6 +48,7 @@ function mod:GetOptions()
 		14515, -- Dominate Mind
 		{23023, "ICON"}, -- Conflagration
 		"eggs",
+<<<<<<< HEAD
 		"stages",
 	}
 end
@@ -53,6 +57,12 @@ function mod:OnRegister()
 	self.displayName = L.bossName
 end
 
+=======
+		"stages"
+	}
+end
+
+>>>>>>> Move all `mod.toggleOptions` to `mod:GetOptions`
 function mod:OnBossEnable()
 	self:RegisterEvent("CHAT_MSG_MONSTER_YELL")
 	self:Log("SPELL_AURA_APPLIED", "DominateMind", self:SpellName(14515))
