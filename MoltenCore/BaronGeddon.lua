@@ -16,6 +16,7 @@ mod.engageId = 668
 function mod:GetOptions()
 	return {
 		{20475, "FLASH", "ICON", "PROXIMITY", "SAY"}, -- Living Bomb
+		19659, -- Ignite Mana
 		19695, -- Inferno
 		20478, -- Armageddon
 	}
@@ -24,10 +25,15 @@ end
 function mod:OnBossEnable()
 	self:Log("SPELL_AURA_APPLIED", "LivingBomb", self:SpellName(20475))
 	self:Log("SPELL_AURA_REMOVED", "LivingBombRemoved", self:SpellName(20475))
+	self:Log("SPELL_CAST_SUCCESS", "IgniteMana", self:SpellName(19659))
 	self:Log("SPELL_CAST_SUCCESS", "Inferno", self:SpellName(19695))
 	self:Log("SPELL_CAST_SUCCESS", "Armageddon", self:SpellName(20478))
 
 	self:Death("Win", 12056)
+end
+
+function mod:OnEngage()
+	self:Bar(19659, 12)
 end
 
 --------------------------------------------------------------------------------
@@ -49,6 +55,13 @@ end
 
 function mod:LivingBombRemoved(args)
 	self:CloseProximity(20475)
+end
+
+function mod:IgniteMana(args)
+	if UnitPowerType('player') == 0 then
+		self:Message(19659, "orange")
+	end
+	self:Bar(19659, 30)
 end
 
 function mod:Inferno(args)

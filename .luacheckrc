@@ -240,6 +240,7 @@ globals = {
 	"UnitPosition",
 	"UnitPower",
 	"UnitPowerMax",
+	"UnitPowerType",
 	"UnitRace",
 	"UnitSetRole",
 
