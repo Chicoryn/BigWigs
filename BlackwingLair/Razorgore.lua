@@ -2,9 +2,10 @@
 -- Module declaration
 --
 
-local mod = BigWigs:NewBoss("Razorgore the Untamed", 469, 1529)
+local mod = BigWigs:NewBoss("Razorgore the Untamed", 469)
 if not mod then return end
 mod:RegisterEnableMob(12435, 12557) -- Razorgore, Grethok the Controller
+mod.engageId = 610
 
 local eggs = 0
 

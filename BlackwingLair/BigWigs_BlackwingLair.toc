@@ -27,6 +27,6 @@
 ## Dependencies: BigWigs
 
 ## X-Category: Raid
-## X-BigWigs-LoadOn-InstanceId: 409
+## X-BigWigs-LoadOn-InstanceId: 469
 
 modules.xml

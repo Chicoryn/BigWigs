@@ -2,9 +2,10 @@
 -- Module declaration
 --
 
-local mod = BigWigs:NewBoss("Vaelastrasz the Corrupt", 469, 1530)
+local mod = BigWigs:NewBoss("Vaelastrasz the Corrupt", 469)
 if not mod then return end
 mod:RegisterEnableMob(13020)
+mod.engageId = 611
 
 --------------------------------------------------------------------------------
 -- Initialization

@@ -2,9 +2,10 @@
 -- Module declaration
 --
 
-local mod, CL = BigWigs:NewBoss("Nefarian ", 469, 1536) -- Space is intentional to prevent conflict with Nefarian from BWD
+local mod, CL = BigWigs:NewBoss("Nefarian ", 469) -- Space is intentional to prevent conflict with Nefarian from BWD
 if not mod then return end
 mod:RegisterEnableMob(11583, 10162) -- Nefarian, Lord Victor Nefarius
+mod.engageId = 617
 
 --------------------------------------------------------------------------------
 -- Localization
@@ -101,7 +102,7 @@ function mod:OnBossEnable()
 
 	self:RegisterEvent("CHAT_MSG_MONSTER_YELL")
 
-	self:Death("DrakonidDeath", 14261, 14265, 14302)
+	self:Death("DrakonidDeath", 14261, 14262, 14263, 14264, 14265, 14302)
 	self:Death("Win", 11583)
 end
 
