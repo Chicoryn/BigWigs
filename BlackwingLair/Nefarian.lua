@@ -45,7 +45,9 @@ if L then
 	L.warndemonhunter = "Demon Hunters - Blinded"
 
 	L.drakonid = "Drakonids"
-	L.drakonid_desc = "Count the number of killed Drakonids"
+	L.drakonid_desc = "Count the number of killed drakonids"
+
+	L.drakonids_killed = "%d/42 draknoids killed"
 
 	L.classcall_bar = "Class call"
 
@@ -104,7 +106,7 @@ end
 
 function mod:DrakonidDeath(args)
 	drakonidDeath = drakonidDeath + 1
-	self:Message("drakonid", "white", nil, CL.count:format(drakonidDeath))
+	self:Message("drakonid", "green", nil, L.drakonids_killed:format(drakonidDeath))
 end
 
 function mod:Fear(args)
