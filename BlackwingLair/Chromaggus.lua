@@ -2,7 +2,7 @@
 -- Module declaration
 --
 
-local mod, CL = BigWigs:NewBoss("Chromaggus", 469, 1535)
+local mod, CL = BigWigs:NewBoss("Chromaggus", 469)
 if not mod then return end
 mod:RegisterEnableMob(14020)
 mod:SetAllowWin(true)

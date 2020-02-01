@@ -114,7 +114,7 @@ function mod:OnBossEnable()
 
 	self:RegisterEvent("CHAT_MSG_MONSTER_YELL")
 
-	self:Death("DrakonidDeath", 14261, 14265, 14302)
+	self:Death("DrakonidDeath", 14261, 14262, 14263, 14264, 14265, 14302)
 	self:Death("Win", 11583)
 end
 
