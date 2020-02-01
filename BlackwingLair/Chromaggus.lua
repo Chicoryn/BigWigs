@@ -2,7 +2,7 @@
 -- Module declaration
 --
 
-local mod, CL = BigWigs:NewBoss("Chromaggus", 469)
+local mod, CL = BigWigs:NewBoss("Chromaggus", 469, 1535)
 if not mod then return end
 mod:RegisterEnableMob(14020)
 mod:SetAllowWin(true)
@@ -97,6 +97,7 @@ end
 function mod:OnEngage()
 	barcount = 2
 	debuffCount = 0
+	self:RegisterUnitEvent("UNIT_HEALTH_FREQUENT", "FrenzySoon", "boss1")
 
 	local b1 = CL.count:format(self:SpellName(18617), 1) -- Breath (1)
 	local b2 = CL.count:format(self:SpellName(18617), 2) -- Breath (2)
@@ -115,6 +116,7 @@ function mod:Enrage(args)
 end
 
 function mod:Frenzy(args)
+	self:UnregisterUnitEvent("UNIT_HEALTH_FREQUENT", "boss1")
 	self:Message(23537, "red", nil, "20% - ".. args.spellName)
 end
 
@@ -150,6 +152,14 @@ function mod:Breath(args)
 	self:Message("breath", "yellow", nil, CL.casting:format(args.spellName), icons[args.spellName])
 	self:DelayedMessage("breath", 50, "red", CL.custom_sec:format(args.spellName, 10))
 	self:Bar("breath", 60, icons[args.spellName])
+end
+
+function mod:FrenzySoon(event, unitId)
+	local hp = UnitHealth(unitId) / UnitHealthMax(unitId)
+	if hp < 0.25 then -- Frenzy at 20%
+		self:UnregisterUnitEvent(event, unitId)
+		self:Message(23537, "cyan", nil, CL.soon:format(self:SpellName(23537)), false)
+	end
 end
 
 --function mod:CHAT_MSG_MONSTER_EMOTE(msg)

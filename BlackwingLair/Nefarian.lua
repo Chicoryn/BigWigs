@@ -2,7 +2,7 @@
 -- Module declaration
 --
 
-local mod, CL = BigWigs:NewBoss("NefarianBWL", 469)
+local mod, CL = BigWigs:NewBoss("NefarianBWL", 469, 1536)
 if not mod then return end
 mod:RegisterEnableMob(11583, 10162) -- Nefarian, Lord Victor Nefarius
 mod:SetAllowWin(true)
@@ -11,6 +11,8 @@ mod.engageId = 617
 --------------------------------------------------------------------------------
 -- Localization
 --
+
+local drakonidDeath = 0
 
 local L = mod:NewLocale("enUS", true)
 if L then
@@ -44,6 +46,9 @@ if L then
 	L.warndeathknight = "Death Knights - Death Grip"
 	L.warnmonk = "Monks - Stuck Rolling"
 	L.warndemonhunter = "Demon Hunters - Blinded"
+
+	L.drakonid = "Drakonids"
+	L.drakonid_desc = "Count the number of killed Drakonids"
 
 	L.classcall_bar = "Class call"
 
@@ -106,12 +111,22 @@ function mod:OnBossEnable()
 
 	self:RegisterEvent("CHAT_MSG_MONSTER_YELL")
 
+	self:Death("DrakonidDeath", 14261, 14265, 14302)
 	self:Death("Win", 11583)
+end
+
+function mod:OnEngage()
+	drakonidDeath = 0
 end
 
 --------------------------------------------------------------------------------
 -- Event Handlers
 --
+
+function mod:DrakonidDeath(args)
+	drakonidDeath = drakonidDeath + 1
+	self:Message("drakonid", "white", nil, CL.count:format(drakonidDeath))
+end
 
 function mod:Fear(args)
 	self:DelayedMessage(22686, 26, "orange", CL.custom_sec:format(args.spellName, 5))

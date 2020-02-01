@@ -20,6 +20,7 @@ move-folders:
     BigWigs/Options: BigWigs_Options
     BigWigs/Plugins: BigWigs_Plugins
     BigWigs/Onyxia: BigWigs_Onyxia
+    BigWigs/BlackwingLair: BigWigs_BlackwingLair
     BigWigs/MoltenCore: BigWigs_MoltenCore
     BigWigs/World: BigWigs_World
     BigWigs/BlackwingLair: BigWigs_BlackwingLair
