@@ -9,6 +9,7 @@ mod.engageId = 616
 
 local barcount = 2
 local debuffCount = 0
+local enrageCount = 0
 
 --------------------------------------------------------------------------------
 -- Localization
@@ -62,6 +63,7 @@ end
 function mod:OnEngage()
 	barcount = 2
 	debuffCount = 0
+	enrageCount = 0
 	self:RegisterUnitEvent("UNIT_HEALTH_FREQUENT", "FrenzySoon", "boss1")
 
 	local b1 = CL.count:format(self:SpellName(18617), 1) -- Breath (1)
@@ -77,7 +79,8 @@ end
 --
 
 function mod:Enrage(args)
-	self:Message(args.spellId, "yellow")
+	enrageCount = enrageCount + 1
+	self:Message(args.spellId, "yellow", nil, CL.count:format(args.spellName, enrageCount))
 end
 
 function mod:Frenzy(args)

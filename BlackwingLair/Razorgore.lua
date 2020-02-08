@@ -2,11 +2,12 @@
 -- Module declaration
 --
 
-local mod = BigWigs:NewBoss("Razorgore the Untamed", 469)
+local mod, CL = BigWigs:NewBoss("Razorgore the Untamed", 469)
 if not mod then return end
 mod:RegisterEnableMob(12435, 12557) -- Razorgore, Grethok the Controller
 mod.engageId = 610
 
+local find = string.find
 local eggs = 0
 
 --------------------------------------------------------------------------------
@@ -43,12 +44,12 @@ function mod:GetOptions()
 end
 
 function mod:OnBossEnable()
+	self:RegisterEvent("CHAT_MSG_MONSTER_YELL")
 	self:Log("SPELL_AURA_APPLIED", "DominateMind", 14515)
 	self:Log("SPELL_AURA_APPLIED", "Conflagration", 23023)
 	self:Log("SPELL_AURA_REMOVED", "ConflagrationOver", 23023)
 	self:Log("SPELL_CAST_SUCCESS", "Phase2", 23040)
 	self:Log("SPELL_CAST_SUCCESS", "DestroyEgg", 19873)
-	self:Yell("Engage", L.start_trigger)
 end
 
 function mod:OnEngage()
@@ -61,6 +62,12 @@ end
 --------------------------------------------------------------------------------
 -- Event Handlers
 --
+
+function mod:CHAT_MSG_MONSTER_YELL(event, msg)
+	if find(msg, L.start_trigger, nil, true) or find(msg, L.start_trigger) then
+		self:Engage()
+	end
+end
 
 function mod:DominateMind(args)
 	self:TargetMessage(args.spellId, args.destName, "red", "Alert")

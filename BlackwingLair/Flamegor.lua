@@ -11,6 +11,8 @@ mod.engageId = 615
 -- Initialization
 --
 
+local enrageCount = 0
+
 function mod:GetOptions()
 	return {
 		23339, -- Wing Buffet
@@ -33,6 +35,7 @@ end
 
 function mod:OnEngage()
 	self:Bar(23339, 29) -- Wing Buffet
+	enrageCount = 0
 end
 
 --------------------------------------------------------------------------------
@@ -50,8 +53,9 @@ function mod:ShadowFlame(args)
 end
 
 function mod:Enrage(args)
-	self:Message(args.spellId, "orange")
-	self:Bar(args.spellId, 10)
+	enrageCount = enrageCount + 1
+	self:Message(args.spellId, "orange", nil, CL.count(args.spellName, enrageCount))
+	self:Bar(args.spellId, 10, CL.count(args.spellName, enrageCount + 1))
 end
 
 function mod:EnrageRemoved(args)

@@ -55,7 +55,7 @@ function mod:OnBossEnable()
 	self:RegisterEvent("CHAT_MSG_MONSTER_YELL")
 end
 
-function OnEngage()
+function mod:OnEngage()
 	fearCount = 0
 end
 
