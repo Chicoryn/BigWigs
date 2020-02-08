@@ -22,6 +22,8 @@ L = mod:GetLocale()
 -- Initialization
 --
 
+local enrageCount = 0
+
 function mod:GetOptions()
 	return {
 		23339, -- Wing Buffet
@@ -48,6 +50,7 @@ end
 
 function mod:OnEngage()
 	self:Bar(23339, 29) -- Wing Buffet
+	enrageCount = 0
 end
 
 --------------------------------------------------------------------------------
@@ -65,8 +68,9 @@ function mod:ShadowFlame(args)
 end
 
 function mod:Enrage(args)
-	self:Message(23342, "orange")
-	self:Bar(23342, 10)
+	enrageCount = enrageCount + 1
+	self:Message(23342, "orange", CL.count(args.spellName, enrageCount))
+	self:Bar(23342, 10, CL.count(args.spellName, enrageCount + 1))
 end
 
 function mod:EnrageRemoved(args)

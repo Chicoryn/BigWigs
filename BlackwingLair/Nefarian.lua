@@ -13,6 +13,7 @@ mod.engageId = 617
 --
 
 local drakonidDeath = 0
+local fearCount = 0
 
 local L = mod:NewLocale("enUS", true)
 if L then
@@ -120,6 +121,7 @@ end
 
 function mod:OnEngage()
 	drakonidDeath = 0
+	fearCount = 0
 end
 
 --------------------------------------------------------------------------------
@@ -132,10 +134,12 @@ function mod:DrakonidDeath(args)
 end
 
 function mod:Fear(args)
+	fearCount = fearCount + 1
+
 	self:DelayedMessage(22686, 26, "orange", CL.custom_sec:format(args.spellName, 5))
-	self:CDBar(22686, 32)
-	self:Message(22686, "red", "Alert")
-	self:Bar(22686, 1.5, CL.cast:format(args.spellName))
+	self:CDBar(22686, 32, CL.count(args.spellName, fearCount + 1))
+	self:Message(22686, "red", "Alert", CL.count:format(args.spellName, fearCount))
+	self:Bar(22686, 1.5, CL.cast:format(CL.count:format(args.spellName, fearCount)))
 end
 
 function mod:ShadowFlame(args)
