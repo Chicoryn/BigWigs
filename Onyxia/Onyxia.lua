@@ -2,7 +2,7 @@
 -- Locals
 --
 
-local mod = BigWigs:NewBoss("Onyxia", 249)
+local mod, CL = BigWigs:NewBoss("Onyxia", 249)
 if not mod then return end
 mod:RegisterEnableMob(10184)
 mod.engageId = 1084
@@ -10,6 +10,8 @@ mod.engageId = 1084
 --------------------------------------------------------------------------------
 -- Localization
 --
+
+local fearCount = 0
 
 local L = mod:NewLocale("enUS", true)
 if L then
@@ -53,12 +55,17 @@ function mod:OnBossEnable()
 	self:RegisterEvent("CHAT_MSG_MONSTER_YELL")
 end
 
+function OnEngage()
+	fearCount = 0
+end
+
 --------------------------------------------------------------------------------
 -- Event Handlers
 --
 
 function mod:Fear(args)
-	self:Message(18431, "yellow", nil, L["fear_message"])
+	fearCount = fearCount + 1
+	self:Message(18431, "yellow", nil, CL.count:format(L["fear_message"], fearCount))
 end
 
 function mod:DeepBreath()
@@ -76,5 +83,6 @@ function mod:CHAT_MSG_MONSTER_YELL(_, msg)
 		self:Message("phase", "green", nil, L["phase2_message"], false)
 	elseif msg:find(L.phase3_trigger, nil, true) then
 		self:Message("phase", "green", nil, L["phase3_message"], false)
+		fearCount = 0
 	end
 end
