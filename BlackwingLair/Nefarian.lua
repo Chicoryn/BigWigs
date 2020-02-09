@@ -47,6 +47,7 @@ if L then
 
 	L.drakonid = "Drakonids"
 	L.drakonid_desc = "Count the number of killed drakonids"
+	L.drakonid_icon = "INV_Misc_Head_Dragon_Black"
 
 	L.drakonids_killed = "%d/42 draknoids killed"
 
@@ -118,7 +119,7 @@ end
 
 function mod:DrakonidDeath(args)
 	drakonidDeath = drakonidDeath + 1
-	self:Message("drakonid", "green", nil, L.drakonids_killed:format(drakonidDeath))
+	self:Message("drakonid", "green", nil, L.drakonids_killed:format(drakonidDeath), "INV_Misc_Head_Dragon_Black")
 end
 
 function mod:Fear(args)
