@@ -28,7 +28,7 @@ end
 function mod:OnEngage()
 	adrenalineCount = 0
 
-	self:CDBar(18173, 15,  CL.count(self:SpellName(18173), 1))
+	self:CDBar(18173, 15,  CL.count:format(self:SpellName(18173), 1))
 end
 
 --------------------------------------------------------------------------------
@@ -41,6 +41,6 @@ function mod:Adrenaline(args)
 	self:TargetMessage(args.spellId, args.destName, "yellow", "Alarm")
 	self:PrimaryIcon(args.spellId, args.destName)
 	self:TargetBar(args.spellId, 20, args.destName, 67729, args.spellId) -- Explode
-	self:CDBar(18173, 15,  CL.count(self:SpellName(18173), adrenalineCount + 1))
+	self:CDBar(18173, 15,  CL.count:format(self:SpellName(18173), adrenalineCount + 1))
 end
 
