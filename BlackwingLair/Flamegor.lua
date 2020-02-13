@@ -69,8 +69,8 @@ end
 
 function mod:Enrage(args)
 	enrageCount = enrageCount + 1
-	self:Message(23342, "orange", CL.count(args.spellName, enrageCount))
-	self:Bar(23342, 10, CL.count(args.spellName, enrageCount + 1))
+	self:Message(23342, "orange", nil, CL.count:format(args.spellName, enrageCount))
+	self:Bar(23342, 10, nil, CL.count:format(args.spellName, enrageCount + 1))
 end
 
 function mod:EnrageRemoved(args)

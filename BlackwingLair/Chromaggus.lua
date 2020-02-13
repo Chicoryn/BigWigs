@@ -115,7 +115,7 @@ end
 
 function mod:Enrage(args)
 	enrageCount = enrageCount + 1
-	self:Message(23128, "yellow", CL.count:format(args.spellName, enrageCount))
+	self:Message(23128, "yellow", nil, CL.count:format(args.spellName, enrageCount))
 end
 
 function mod:Frenzy(args)
