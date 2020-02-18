@@ -164,6 +164,8 @@ end
 function mod:CHAT_MSG_MONSTER_YELL(_, msg)
 	if msg:find(L.landing_soon_trigger) then
 		self:Bar("otherwarn", 10, L.landing_warning, "INV_Misc_Head_Dragon_Black")
+		self:CDBar(22686, 55, CL.cast:format(CL.count:format(self:SpellName(22686), 1))) -- Bellowing Roar
+		self:CDBar("classcall", 85, L.classcall_bar, "Spell_Shadow_Charm")
 		return
 	end
 	for i,v in pairs(warnpairs) do
