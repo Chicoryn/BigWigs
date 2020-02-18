@@ -48,6 +48,7 @@ end
 
 function mod:OnEngage()
 	self:Bar(23339, 29) -- Wing Buffet
+	self:Bar(22539, 18) -- Shadow Flame
 end
 
 --------------------------------------------------------------------------------
@@ -62,6 +63,7 @@ end
 
 function mod:ShadowFlame(args)
 	self:Message(22539, "red")
+	self:Bar(22539, 14)
 end
 
 function mod:Curse(args)
