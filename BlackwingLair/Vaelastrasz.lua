@@ -15,6 +15,12 @@ mod.engageId = 611
 local L = mod:NewLocale("enUS", true)
 if L then
 	L.bossName = "Vaelastrasz the Corrupt"
+	L.pull_trigger = "Too late, friends! Nefarius' corruption has taken hold...I cannot...control myself."
+
+	L.engage = "Engage"
+	L.engage_bar = "Pull"
+	L.engage_desc = "Warn for when combat starts."
+	L.engage_icon = "spell_fire_fireball02"
 end
 L = mod:GetLocale()
 
@@ -27,6 +33,7 @@ local adrenalineCount = 0
 function mod:GetOptions()
 	return {
 		{18173, "ICON"}, -- Burning Adrenaline
+		"engage",
 	}
 end
 
@@ -35,6 +42,7 @@ function mod:OnRegister()
 end
 
 function mod:OnBossEnable()
+	self:RegisterEvent("CHAT_MSG_MONSTER_YELL")
 	self:Log("SPELL_AURA_APPLIED", "Adrenaline", self:SpellName(18173))
 
 	self:Death("Win", 13020)
@@ -49,6 +57,12 @@ end
 --------------------------------------------------------------------------------
 -- Event Handlers
 --
+
+function mod:CHAT_MSG_MONSTER_YELL(_, msg)
+	if msg:find(L.pull_trigger) then
+		self:Bar("engage", 43, L.engage_bar, L.engage_icon)
+	end
+end
 
 function mod:Adrenaline(args)
 	adrenalineCount = adrenalineCount + 1
