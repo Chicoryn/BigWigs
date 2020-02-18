@@ -55,7 +55,7 @@ function mod:Adrenaline(args)
 
 	self:TargetMessage(18173, args.destName, "yellow", "Alarm")
 	self:PrimaryIcon(18173, args.destName)
-	self:TargetBar(18173, 20, args.destName, 67729, 18173) -- Explode
 	self:CDBar(18173, 15,  CL.count:format(self:SpellName(18173), adrenalineCount + 1))
+	self:TargetBar(18173, 20, args.destName) -- Explode
 end
 
